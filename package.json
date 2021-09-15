@@ -6,7 +6,9 @@
     "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+	"heroku-prebuild": "npm install -f",
+    "heroku-postbuild": "npm run prod"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "express": "^4.17.1",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
+    "serve": "^12.0.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
